@@ -15,5 +15,8 @@
             </div>
         @endforeach
     </div>
+    <div class="container-link">
+        {{ $trains->links() }}
+    </div>
 
 @endsection

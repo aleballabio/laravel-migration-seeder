@@ -29,11 +29,15 @@ class TrainsController extends Controller
 {
     public function trains()
     {
+        /*
         $date = Carbon::now()->format('Y-m-d');
         $trains = Train::where('orario_di_partenza', 'like',  "%$date%")
             ->where('cancellato', '=', 0)
             ->get();
 
+        */
+
+        $trains = Train::paginate(30);
 
         $data = [
             'trains' => $trains,
